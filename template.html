@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+            <link rel="stylesheet" href="/static/main.css">
+
+        <link rel="stylesheet" href="/static/landing_map.css">
+
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+
+</head>
+<body>
+<div class="grid-y grid-frame">
+  <div class="cell shrink header cell-block-container uo-header">
+      <div class="cell small-12 uo-top-bar">
+        <div class="grid-x uo-logo-bar w-100 ">
+            <div class="cell small-12 medium-3 uo-logo-bar-cell">
+                <img src="/media/logo.svg" class="uo-logo">
+            </div>
+             <div class="cell small-12 medium-9 uo-breadcrumb-bar uo-logo-bar-cell">
+                 {% block breadcrumb %}
+
+      {% endblock %}
+             </div>
+            <div class="cell small-12 uo-links">
+                <div class="uo-link" link="/"><i  class="uo-link-icon uo-icon-portal"></i>Portal</div>
+                <div class="uo-link" link ='/graphs/'><i  class="uo-link-icon uo-icon-graphs"></i>Graphs</div>
+                <div class="uo-link" link="/api_docs/"><i  class="uo-link-icon uo-icon-api"></i>API</div>
+                <div class="uo-link" link="/data/"><i  class="uo-link-icon uo-icon-archive"></i>Data</div>
+<!--                <div class="uo-link" link="#"><i  class="uo-link-icon uo-icon-radar"></i>Radar</div>-->
+
+            </div>
+        </div>
+    </div>
+  </div>
+  <div class="cell auto  cell-block-container">
+{% block main_page %}
+
+      {% endblock %}
+  </div>
+</div>
+
+<script src="/static/main.bundle.js"></script>
+
+
+</body>
+</html>
